@@ -1,10 +1,14 @@
+package theWayDefaultPackage;
 import java.util.Scanner;
 
+	// Programa de cálculo de IMC
 public class TheWayOne {
 
 	public static void main (String [] args)
 	{
+		//Variáveis do tipo double necessários
 		double peso,altura,imc;
+		//Variável da mensagem que vai ser imprimida
 		String msg;
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Bem vindo ao programa que calcula o IMC");
@@ -14,7 +18,10 @@ public class TheWayOne {
 		System.out.println("");
 		System.out.print("Altura:");
 		altura = sc.nextDouble();
+		//Processamento do IMC com as entradas feita pelo usuário acima
 		imc = peso/(altura*altura);
+		
+		//Verificamento do IMC e incrementação da mensagem que deve ser imprimida na tela
 		if(imc <20.0)
 		{
 			msg = "O seu peso eh de "+peso+"Kg"+", e a sua altura eh de"+altura+"m"+" e o seu IMC eh de:"+imc+", logo voce esta abaixo do peso!";
@@ -38,6 +45,7 @@ public class TheWayOne {
 			msg = "O seu peso eh de "+peso+"Kg"+", e a sua altura eh de"+altura+"m"+" e o seu IMC eh de:"+imc+", logo voce esta com super obesidade!!!!CUIDADO!!!";
 		}
 		sc.close();
+		//Impressão do resultado
 		System.out.println(msg);
 	}
 	
